@@ -272,16 +272,16 @@ X Pin_1 1 -200 0 150 R 50 50 1 1 P
 ENDDRAW
 ENDDEF
 #
-# keebio_nice_nano
+# Yokai_nice_nano
 #
-DEF keebio_nice_nano U 0 40 Y Y 1 F N
+DEF Yokai_nice_nano U 0 40 Y Y 1 F N
 F0 "U" 0 0 60 H V C CNN
-F1 "keebio_nice_nano" 0 100 60 H V C CNN
+F1 "Yokai_nice_nano" 0 100 60 H V C CNN
 F2 "" 1050 -2500 60 V I C CNN
 F3 "" 1050 -2500 60 V I C CNN
 DRAW
 S -500 -850 500 750 0 1 0 N
-X TX0/P0.06 1 -700 550 200 R 50 50 1 1 I
+X TX0/P0.06 1 -700 550 200 R 50 50 1 1 w
 X P0.11 10 -700 -350 200 R 50 50 1 1 I
 X P1.04 11 -700 -450 200 R 50 50 1 1 I
 X P1.06 12 -700 -550 200 R 50 50 1 1 I

@@ -1424,17 +1424,6 @@ F 3 "" H 6925 6200 50  0001 C CNN
 	1    6925 6200
 	0    -1   -1   0   
 $EndComp
-$Comp
-L keyboard_parts:SW_PUSH SW29
-U 1 1 612B141F
-P 5825 6050
-F 0 "SW29" H 5825 6200 50  0000 C CNN
-F 1 "SW_PUSH-MX_W_LED" H 5825 5950 50  0001 C CNN
-F 2 "Yokai:Choc_Hotswap_DoubleSide" H 5825 6050 50  0001 C CNN
-F 3 "" H 5825 6050 50  0000 C CNN
-	1    5825 6050
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	5950 900  6050 900 
 Wire Wire Line
@@ -1633,12 +1622,6 @@ Wire Wire Line
 	9875 1700 9875 2075
 Wire Wire Line
 	9875 2075 9550 2075
-Wire Wire Line
-	5550 1975 5225 1975
-Wire Wire Line
-	5550 2400 5225 2400
-Wire Wire Line
-	5225 1975 5225 2400
 $Comp
 L Yokai:VCC #PWR07
 U 1 1 617A36F9
@@ -1664,12 +1647,12 @@ $EndComp
 $Comp
 L Yokai:GND #PWR09
 U 1 1 617BAAD3
-P 10000 2250
-F 0 "#PWR09" H 10000 2000 50  0001 C CNN
-F 1 "GND" H 10005 2077 50  0000 C CNN
-F 2 "" H 10000 2250 50  0001 C CNN
-F 3 "" H 10000 2250 50  0001 C CNN
-	1    10000 2250
+P 10350 2250
+F 0 "#PWR09" H 10350 2000 50  0001 C CNN
+F 1 "GND" H 10355 2077 50  0000 C CNN
+F 2 "" H 10350 2250 50  0001 C CNN
+F 3 "" H 10350 2250 50  0001 C CNN
+	1    10350 2250
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1938,8 +1921,6 @@ Wire Wire Line
 	9550 2400 9550 2250
 Connection ~ 9550 2250
 Wire Wire Line
-	9550 2250 10000 2250
-Wire Wire Line
 	9150 2500 9150 2625
 Wire Wire Line
 	9150 2625 8550 2625
@@ -1973,12 +1954,11 @@ Wire Wire Line
 Connection ~ 5550 2625
 Wire Wire Line
 	5550 2625 4750 2625
-NoConn ~ 9550 2500
 Wire Wire Line
 	4950 1700 4950 1875
 Connection ~ 4950 1875
 Wire Wire Line
-	4950 1875 5550 1875
+	4950 1875 5425 1875
 Wire Wire Line
 	5350 1600 5350 1425
 Wire Wire Line
@@ -1986,9 +1966,6 @@ Wire Wire Line
 Connection ~ 5550 1425
 Text GLabel 1450 1250 0    50   Input ~ 0
 col6
-Wire Wire Line
-	5525 5400 5525 6050
-Connection ~ 5525 5400
 $Comp
 L Device:Rotary_Encoder_Switch SW36
 U 1 1 61E1DA01
@@ -2485,7 +2462,7 @@ Text GLabel 2350 6100 0    50   Input ~ 0
 Text GLabel 2950 6100 2    50   Input ~ 0
 2uD
 $Comp
-L keebio:nice_nano U1
+L Yokai:nice_nano U1
 U 1 1 6122632F
 P 2150 1700
 F 0 "U1" H 2150 2637 60  0000 C CNN
@@ -2530,27 +2507,22 @@ F 3 "" H 1425 7500 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 NoConn ~ 2000 2750
-Text GLabel 5275 6850 0    50   Input ~ 0
+Text GLabel 5275 6925 0    50   Input ~ 0
 row5
-Wire Wire Line
-	5275 6850 6125 6850
 $Comp
 L Yokai:D-Yokai D36
 U 1 1 6148F316
-P 6125 6700
-F 0 "D36" V 6171 6621 50  0000 R CNN
-F 1 "D" V 6080 6621 50  0000 R CNN
-F 2 "Yokai:smd_diode" H 6125 6700 50  0001 C CNN
-F 3 "" H 6125 6700 50  0001 C CNN
-	1    6125 6700
+P 5950 6775
+F 0 "D36" V 5996 6696 50  0000 R CNN
+F 1 "D" V 5905 6696 50  0000 R CNN
+F 2 "Yokai:smd_diode" H 5950 6775 50  0001 C CNN
+F 3 "" H 5950 6775 50  0001 C CNN
+	1    5950 6775
 	0    -1   -1   0   
 $EndComp
-Text GLabel 6125 6550 0    50   Input ~ 0
+Text GLabel 5950 6625 0    50   Input ~ 0
 ESWB
-Wire Wire Line
-	5525 6050 5525 6675
-Connection ~ 5525 6050
-Text GLabel 5700 6675 2    50   Input ~ 0
+Text GLabel 5525 6750 2    50   Input ~ 0
 ESWA
 Text GLabel 2300 6825 2    50   Input ~ 0
 ESWB
@@ -2558,18 +2530,6 @@ Text GLabel 2300 6625 2    50   Input ~ 0
 ESWA
 Text GLabel 2150 2750 3    50   Input ~ 0
 row5
-Wire Wire Line
-	5700 6675 5525 6675
-Wire Wire Line
-	5275 3750 10900 3750
-Wire Wire Line
-	5275 4400 10900 4400
-Wire Wire Line
-	5275 5050 10900 5050
-Wire Wire Line
-	5275 5700 10900 5700
-Wire Wire Line
-	5275 6350 10900 6350
 $Comp
 L Yokai:VCC #PWR03
 U 1 1 61797B76
@@ -2581,4 +2541,187 @@ F 3 "" H 5225 1000 50  0001 C CNN
 	1    5225 1000
 	1    0    0    -1  
 $EndComp
+$Comp
+L keyboard_parts:SW_PUSH SW38
+U 1 1 61407C48
+P 6625 6625
+F 0 "SW38" H 6625 6775 50  0000 C CNN
+F 1 "SW_PUSH-MX_W_LED" H 6625 6525 50  0001 C CNN
+F 2 "Yokai:Choc_Hotswap_DoubleSide" H 6625 6625 50  0001 C CNN
+F 3 "" H 6625 6625 50  0000 C CNN
+	1    6625 6625
+	1    0    0    -1  
+$EndComp
+$Comp
+L Yokai:D-Yokai D37
+U 1 1 61407C4E
+P 6925 6775
+F 0 "D37" V 6971 6696 50  0000 R CNN
+F 1 "D" V 6880 6696 50  0000 R CNN
+F 2 "Yokai:smd_diode" H 6925 6775 50  0001 C CNN
+F 3 "" H 6925 6775 50  0001 C CNN
+	1    6925 6775
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6325 6050 6325 6625
+Connection ~ 6325 6050
+$Comp
+L Yokai:LED_sk2812_Mini_e L37
+U 1 1 6145D27B
+P 5225 2025
+F 0 "L37" H 5225 1852 50  0000 C CNN
+F 1 "LED_sk2812_SM" H 5225 2199 50  0001 C CNN
+F 2 "Yokai:YS-SK6812MINI-E-DoubleSide" H 5225 2025 50  0001 C CNN
+F 3 "" H 5225 2025 50  0001 C CNN
+	1    5225 2025
+	1    0    0    -1  
+$EndComp
+NoConn ~ 9550 2500
+Connection ~ 9300 3750
+Wire Wire Line
+	5275 3750 6125 3750
+Connection ~ 6125 3750
+Wire Wire Line
+	6125 3750 6925 3750
+Connection ~ 6925 3750
+Wire Wire Line
+	6925 3750 7700 3750
+Connection ~ 7700 3750
+Wire Wire Line
+	7700 3750 8500 3750
+Connection ~ 8500 3750
+Wire Wire Line
+	8500 3750 9300 3750
+Wire Wire Line
+	9300 3750 10100 3750
+Connection ~ 10100 3750
+Wire Wire Line
+	10100 3750 10900 3750
+Connection ~ 10100 4400
+Wire Wire Line
+	10100 4400 10900 4400
+Connection ~ 9300 4400
+Wire Wire Line
+	9300 4400 10100 4400
+Connection ~ 8500 4400
+Wire Wire Line
+	8500 4400 9300 4400
+Connection ~ 7700 4400
+Wire Wire Line
+	7700 4400 8500 4400
+Connection ~ 6925 4400
+Wire Wire Line
+	6925 4400 7700 4400
+Wire Wire Line
+	5275 4400 6125 4400
+Connection ~ 6125 4400
+Wire Wire Line
+	6125 4400 6925 4400
+Wire Wire Line
+	5275 5050 6125 5050
+Connection ~ 6125 5050
+Wire Wire Line
+	6125 5050 6925 5050
+Connection ~ 6925 5050
+Wire Wire Line
+	6925 5050 7700 5050
+Connection ~ 7700 5050
+Wire Wire Line
+	7700 5050 8500 5050
+Connection ~ 8500 5050
+Wire Wire Line
+	8500 5050 9300 5050
+Connection ~ 9300 5050
+Wire Wire Line
+	9300 5050 10100 5050
+Connection ~ 10100 5050
+Wire Wire Line
+	10100 5050 10900 5050
+Connection ~ 10100 5700
+Wire Wire Line
+	10100 5700 10900 5700
+Connection ~ 9300 5700
+Wire Wire Line
+	9300 5700 10100 5700
+Connection ~ 8500 5700
+Wire Wire Line
+	8500 5700 9300 5700
+Connection ~ 7700 5700
+Wire Wire Line
+	7700 5700 8500 5700
+Connection ~ 6925 5700
+Wire Wire Line
+	6925 5700 7700 5700
+Wire Wire Line
+	5275 5700 6125 5700
+Connection ~ 6125 5700
+Wire Wire Line
+	6125 5700 6925 5700
+Wire Wire Line
+	6925 6350 7700 6350
+Connection ~ 7700 6350
+Wire Wire Line
+	7700 6350 8500 6350
+Connection ~ 8500 6350
+Wire Wire Line
+	8500 6350 9300 6350
+Connection ~ 9300 6350
+Wire Wire Line
+	9300 6350 10100 6350
+Connection ~ 10100 6350
+Wire Wire Line
+	10100 6350 10900 6350
+Wire Wire Line
+	5550 1975 5500 1975
+Wire Wire Line
+	5500 1975 5500 2075
+Wire Wire Line
+	5500 2075 5425 2075
+Wire Wire Line
+	5425 1975 5425 1875
+Connection ~ 5425 1875
+Wire Wire Line
+	5425 1875 5550 1875
+Wire Wire Line
+	5025 2075 5025 2250
+Wire Wire Line
+	5025 2250 5550 2250
+Connection ~ 5550 2250
+Wire Wire Line
+	5025 1975 4925 1975
+Wire Wire Line
+	4925 1975 4925 2400
+Wire Wire Line
+	4925 2400 5550 2400
+Wire Wire Line
+	9550 2250 10350 2250
+$Comp
+L keyboard_parts:SW_PUSH SW29
+U 1 1 612B141F
+P 5825 6050
+F 0 "SW29" H 5825 6200 50  0000 C CNN
+F 1 "SW_PUSH-MX_W_LED" H 5825 5950 50  0001 C CNN
+F 2 "Yokai:Choc_Hotswap_DoubleSide" H 5825 6050 50  0001 C CNN
+F 3 "" H 5825 6050 50  0000 C CNN
+	1    5825 6050
+	1    0    0    -1  
+$EndComp
+Connection ~ 5525 5400
+Connection ~ 6925 6350
+Wire Wire Line
+	5525 5400 5525 6050
+Wire Wire Line
+	5275 6925 5950 6925
+Connection ~ 5525 6050
+Wire Wire Line
+	6925 6925 5950 6925
+Connection ~ 5950 6925
+Wire Wire Line
+	5525 6050 5525 6750
+Wire Wire Line
+	5275 6350 6125 6350
+Connection ~ 6125 6350
+Wire Wire Line
+	6125 6350 6925 6350
 $EndSCHEMATC
